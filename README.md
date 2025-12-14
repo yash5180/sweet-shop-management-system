@@ -1,74 +1,214 @@
-Sweet Shop Management System (TDD Kata)
+# 🍬 Sweet Shop Management System
 
-Objective
-The goal of this project is to design, build, and test a full-stack Sweet Shop Management System demonstrating backend API development, frontend SPA implementation, database integration, authentication, testing, and responsible AI usage.
+A full-stack **Sweet Shop Management System** built using **Node.js, Express, MongoDB, React, and TypeScript**.
+This project demonstrates backend API design, authentication, inventory management, frontend UI development, and clean coding practices following **Test-Driven Development (TDD)** principles.
 
-Features
-- User registration and login (JWT authentication)
-- Role-based access control (USER / ADMIN)
-- View, search, and filter sweets
-- Purchase sweets (quantity decreases)
-- Admin can add, update, restock, and delete sweets
-- Fully tested backend using Jest & Supertest
-- Modern React frontend with responsive UI
+---
 
-Tech Stack
-Backend:
-- Node.js, TypeScript, Express
-- MongoDB, Mongoose
-- JWT Authentication
-- Jest, Supertest
+## 📌 Project Overview
 
-Frontend:
-- React, TypeScript
-- Vite
-- Axios
-- Custom CSS
+The Sweet Shop Management System allows users to:
 
-API Endpoints
-Auth:
-POST /api/auth/register
-POST /api/auth/login
+* Register and log in securely
+* Browse available sweets
+* Search and filter sweets by name, category, or price
+* Purchase sweets (with real-time inventory updates)
 
-Sweets:
-GET /api/sweets
-GET /api/sweets/search
-POST /api/sweets (Admin)
-PUT /api/sweets/:id (Admin)
-DELETE /api/sweets/:id (Admin)
+Admin users can additionally:
 
-Inventory:
-POST /api/sweets/:id/purchase
-POST /api/sweets/:id/restock (Admin)
+* Add new sweets
+* Update sweet details
+* Restock inventory
+* Delete sweets
 
-Setup Instructions
-Backend:
-- cd backend
-- npm install
-- npm run dev
+The system uses **JWT-based authentication** to protect sensitive routes and enforce role-based access control.
 
-Frontend:
-- cd frontend
-- npm install
-- npm run dev
+---
 
-Environment Variables (.env):
+## 🛠️ Tech Stack
+
+### Backend
+
+* **Node.js**
+* **Express.js**
+* **TypeScript**
+* **MongoDB** (with Mongoose)
+* **JWT Authentication**
+* **bcryptjs** (password hashing)
+
+### Frontend
+
+* **React** (Vite)
+* **TypeScript**
+* **Axios**
+* **CSS / Tailwind-inspired styling**
+
+### Testing
+
+* **Jest** (backend unit & integration tests)
+
+---
+
+## 🔐 Authentication & Authorization
+
+* Users can **register** and **log in**
+* JWT tokens are issued on login
+* Protected routes require a valid token
+* Role-based access:
+
+  * **USER** → purchase sweets
+  * **ADMIN** → add, update, restock, delete sweets
+
+---
+
+## 📡 API Endpoints
+
+### Auth
+
+* `POST /api/auth/register` → Register a new user
+* `POST /api/auth/login` → Login and receive JWT
+
+### Sweets (Protected)
+
+* `POST /api/sweets` → Add a new sweet (Admin)
+* `GET /api/sweets` → Get all sweets
+* `GET /api/sweets/search` → Search sweets
+* `PUT /api/sweets/:id` → Update sweet details (Admin)
+* `DELETE /api/sweets/:id` → Delete a sweet (Admin)
+
+### Inventory
+
+* `POST /api/sweets/:id/purchase` → Purchase a sweet (User)
+* `POST /api/sweets/:id/restock` → Restock sweet (Admin)
+
+Each sweet contains:
+
+* `id`
+* `name`
+* `category`
+* `price`
+* `quantity`
+
+---
+
+## 🖥️ Frontend Features
+
+* Login & Registration forms
+* Sweet listing dashboard
+* Search & filter UI
+* Purchase button (disabled when out of stock)
+* Admin dashboard for inventory management
+* Sweet images auto-mapped by sweet name
+* Dark mode UI
+* Toast notifications for actions
+
+---
+
+## ⚙️ Local Setup Instructions
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/yash5180/sweet-shop-management-system.git
+cd sweet-shop-management-system
+```
+
+---
+
+### 2️⃣ Backend Setup
+
+```bash
+cd backend
+npm install
+```
+
+Create a `.env` file:
+
+```env
 PORT=5001
 MONGO_URI=mongodb://localhost:27017/sweetshop
 JWT_SECRET=my_super_secret_key
+```
 
-Testing
-- cd backend
-- npm test
+Run backend server:
 
-AI Usage
-AI tools (ChatGPT) were used for:
-- Boilerplate generation
-- Writing and debugging tests
-- Improving UI logic
-- Debugging authentication issues
+```bash
+npm run dev
+```
 
-All AI-generated code was reviewed and modified manually.
+---
 
-Conclusion
-This project demonstrates full-stack development skills, clean coding practices, TDD, and responsible AI usage.
+### 3️⃣ Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🧪 Testing (TDD)
+
+* Tests were written before implementing core backend logic
+* Followed **Red → Green → Refactor** cycle
+* Covers authentication, sweet inventory logic, and edge cases
+
+To run tests:
+
+```bash
+cd backend
+npm test
+```
+
+---
+
+## 📸 Screenshots
+
+> (Add screenshots of Login, Sweets Dashboard, Admin Panel here)
+
+---
+
+## 🤖 My AI Usage
+
+I actively used AI tools during development to enhance productivity and code quality.
+
+### Tools Used
+
+* **ChatGPT**
+
+### How I Used AI
+
+* Generated initial boilerplate for backend controllers and middleware
+* Helped debug JWT authentication and CORS issues
+* Assisted in designing REST API structure
+* Improved frontend UI logic and state management
+* Helped structure README documentation
+
+### Reflection
+
+AI significantly accelerated development and helped debug complex issues faster.
+However, all logic was reviewed, understood, and customized manually to ensure correctness and originality.
+
+---
+
+## 📄 License
+
+This project is provided for educational and evaluation purposes.
+
+---
+
+## 👤 Author
+
+**Yash Arora**
+GitHub: [https://github.com/yash5180](https://github.com/yash5180)
+
+---
+
+✨ *Feel free to star the repository if you like it!*
