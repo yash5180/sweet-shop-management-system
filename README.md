@@ -184,7 +184,7 @@ npm test
 ![Search & Filter](Screenshots/search-filter.png)
 
 ### 🛠️ Admin Dashboard
-![Admin Dashboard](Screenshots/admin-dashboard.png)
+![Admin Dashboard](Screenshots/Admin-dashboard.png)
 
 
 ---
