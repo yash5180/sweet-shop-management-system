@@ -171,7 +171,24 @@ npm test
 
 ## 📸 Screenshots
 
-> (Add screenshots of Login, Sweets Dashboard, Admin Panel here)
+### 🔐 Login Page
+![Login Page](screenshots/login.png)
+
+### 📝 Registration Page
+![Register Page](screenshots/register.png)
+
+### 🍬 User Dashboard – Available Sweets
+![User Dashboard](screenshots/user-dashboard.png)
+
+### 🔍 Search & Filter Functionality
+![Search & Filter](screenshots/search-filter.png)
+
+### 🛠️ Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### 🌙 Dark Mode (Optional)
+![Dark Mode](screenshots/dark-mode.png)
+
 
 ---
 
