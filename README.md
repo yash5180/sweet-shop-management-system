@@ -175,7 +175,7 @@ npm test
 ![Login Page](Screenshots/login.png)
 
 ### 📝 Registration Page
-![Register Page](Screenshots/register.png)
+![Register Page](Screenshots/Register.png)
 
 ### 🍬 User Dashboard – Available Sweets
 ![User Dashboard](Screenshots/user-dashboard.png)
