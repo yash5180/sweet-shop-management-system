@@ -172,22 +172,19 @@ npm test
 ## 📸 Screenshots
 
 ### 🔐 Login Page
-![Login Page](screenshots/login.png)
+![Login Page](Screenshots/login.png)
 
 ### 📝 Registration Page
-![Register Page](screenshots/register.png)
+![Register Page](Screenshots/register.png)
 
 ### 🍬 User Dashboard – Available Sweets
-![User Dashboard](screenshots/user-dashboard.png)
+![User Dashboard](Screenshots/user-dashboard.png)
 
 ### 🔍 Search & Filter Functionality
-![Search & Filter](screenshots/search-filter.png)
+![Search & Filter](Screenshots/search-filter.png)
 
 ### 🛠️ Admin Dashboard
-![Admin Dashboard](screenshots/admin-dashboard.png)
-
-### 🌙 Dark Mode (Optional)
-![Dark Mode](screenshots/dark-mode.png)
+![Admin Dashboard](Screenshots/admin-dashboard.png)
 
 
 ---
